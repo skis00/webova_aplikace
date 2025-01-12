@@ -159,11 +159,83 @@ select {
 }
 
 /* ---------------------- */
-/* Patička                */
+/* Live exchange rates    */
 /* ---------------------- */
-footer {
-  background-color: rgba(0, 0, 0, 0.15);
+#live-rates-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5em;
+  padding: 1.5em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+#live-rates-section h2 {
+  margin-bottom: 0.5em;
+}
+
+.inverse-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 1em 0;
+  font-weight: 600;
+}
+
+#liveRatesTable {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+#liveRatesTable th, 
+#liveRatesTable td {
+  text-align: left;
+  padding: 0.6em;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+#liveRatesTable th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
+#liveRatesBody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Sloupec pro "Change (24h)" - záporné a kladné barvy */
+.change-negative {
+  color: #f44336; /* red */
+}
+
+.change-positive {
+  color: #4caf50; /* green */
+}
+
+/* Mini chart placeholder */
+.mini-chart {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  background-color: #eee;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+}
+
+/* "Send" button */
+.send-button {
+  background-color: #007bff;
   color: #fff;
-  font-size: 0.9rem;
-  padding: 1em;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
 }
