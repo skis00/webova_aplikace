@@ -1,0 +1,169 @@
+/* ---------------------- */
+/* Reset a základní styly */
+/* ---------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* ----------------- */
+/* Nastavení pozadí  */
+/* ----------------- */
+body {
+  background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----------------------- */
+/* Hlavní struktura layout */
+/* ----------------------- */
+header, footer {
+  text-align: center;
+  padding: 1em;
+  color: #fff;
+}
+
+header h1 {
+  margin-bottom: 0.4em;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1em;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ----------------------- */
+/* Sekce s konvertorem    */
+/* ----------------------- */
+#converter-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5em;
+  padding: 1.5em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+}
+
+.form-group {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.4em;
+  font-weight: 600;
+}
+
+input[type="number"],
+select {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 0.3em;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* Prohození měn */
+#swapBtn {
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 0.3em;
+  font-size: 1.2rem;
+  padding: 0.6em 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: flex-end; /* zarovná se dolů k inputu */
+  height: 42px;
+}
+
+#swapBtn:hover {
+  background-color: #e68a00;
+}
+
+/* Tlačítko pro konverzi */
+#convertBtn {
+  flex: 1 1 auto;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 0.3em;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+#convertBtn:hover {
+  background-color: #43a047;
+}
+
+/* Výsledek */
+#result {
+  margin-top: 1em;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  color: #444;
+}
+
+/* ----------------------- */
+/* Sekce historie převodů  */
+/* ----------------------- */
+#history-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5em;
+  padding: 1.5em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+#history-section h2 {
+  margin-bottom: 1em;
+}
+
+#historyList {
+  list-style-type: none;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 1em;
+}
+
+#historyList li {
+  margin-bottom: 0.4em;
+  padding: 0.4em;
+  background-color: #f8f8f8;
+  border-left: 4px solid #4caf50;
+  font-size: 0.95rem;
+  line-height: 1.4em;
+  border-radius: 0.3em;
+}
+
+/* ---------------------- */
+/* Patička                */
+/* ---------------------- */
+footer {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 1em;
+}
