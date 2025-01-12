@@ -15,10 +15,11 @@
 
   <header>
     <h1>Global Currency Converter</h1>
-    <p>Aplikace pro převod všech světových měn podle aktuálních kurzů.</p>
+    <p>Aplikace pro převod 15 nejpoužívanějších světových měn podle aktuálních kurzů.</p>
   </header>
 
   <main>
+    <!-- 1) Sekce pro klasický převodník -->
     <section id="converter-section">
       <div class="form-container">
         <div class="form-group">
@@ -44,11 +45,36 @@
       <div id="result"></div>
     </section>
 
+    <!-- 2) Historie -->
     <section id="history-section">
       <h2>Historie převodů</h2>
-      <ul id="historyList">
-        <!-- Sem se budou vkládat poslední převody -->
-      </ul>
+      <ul id="historyList"><!-- Sem se budou vkládat poslední převody --></ul>
+    </section>
+
+    <!-- 3) Live Exchange Rates – ukázková tabulka -->
+    <section id="live-rates-section">
+      <h2>Live exchange rates</h2>
+      <p>Compare 15+ currencies in real time & find the right moment to transfer funds.</p>
+
+      <div class="inverse-switch">
+        <label for="inverseToggle">Inverse</label>
+        <input type="checkbox" id="inverseToggle" />
+      </div>
+
+      <table id="liveRatesTable">
+        <thead>
+          <tr>
+            <th>Currency</th>
+            <th>Amount (1 base)</th>
+            <th>Change (24h)</th>
+            <th>Chart (24h)</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="liveRatesBody">
+          <!-- Sem se generuje JS -->
+        </tbody>
+      </table>
     </section>
   </main>
 
