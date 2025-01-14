@@ -10,7 +10,6 @@ $(document).ready(function() {
   const $prehodPrep   = $('#prehodPrep');
   const $aktualneKurzyTelo= $('#aktualneKurzyTelo');
 
-  // API
   const API_KEY = 'c7ff1b178b88dcdaaa5eb7691e144760';
 
   const oblubeneMeny = {
@@ -70,7 +69,7 @@ $(document).ready(function() {
     if (zmenaCiel  !== 'USD') currencies.push(zmenaCiel);
     currencies = [...new Set(currencies)];
     
-    const url = `http://apilayer.net/api/live?access_key=${API_KEY}&source=USD&currencies=${currencies.join(',')}&format=1`;
+    const url = `https://apilayer.net/api/live?access_key=${API_KEY}&source=USD&currencies=${currencies.join(',')}&format=1`;
 
     $.ajax({
       url: url,
@@ -130,7 +129,7 @@ $(document).ready(function() {
   // aktualne_kurzy
   function nacitajAktualneKurzy() {
     const kody = Object.keys(oblubeneMeny).sort().filter(c => c !== 'USD');
-    const url = `http://apilayer.net/api/live?access_key=${API_KEY}&source=USD&currencies=${kody.join(',')}&format=1`;
+    const url = `https://apilayer.net/api/live?access_key=${API_KEY}&source=USD&currencies=${kody.join(',')}&format=1`;
 
     $.ajax({
       url: url,
